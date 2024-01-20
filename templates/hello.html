@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{ block("head", "_blocks/head.html") }}
+</head>
+<body>
+    <h1>Hello {{ name }} ini Template Twig</h1>
+
+    <p>Selamat datang <b>{{ name }}</b> di tutorial Slim Framework dan Twig</p>
+
+    <h3>Buku Slim:</h3>
+    <ul>
+        {% for book in books %}
+        <li>{{ book }}</li>
+        {% endfor %}
+    </ul>
+
+    {% if isAdmin == true %}
+    <p>Selamat datang admin!</p>
+    {% endif %}
+</body>
+</html>

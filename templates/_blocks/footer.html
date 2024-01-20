@@ -1,0 +1,30 @@
+{% block footer %}
+<div class="wrapper row5">
+    <div id="copyright" class="hoc clear">
+        <p class="fl_left">Copyright &copy; <a href="#">Institut Asia Malang</a></p>
+        <p class="fl_right">Biro Administrasi dan Akademik</p>
+    </div>
+</div>
+<a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+
+<script src="layout/scripts/jquery.min.js"></script>
+<script src="layout/scripts/jquery.backtotop.js"></script>
+<script src="layout/scripts/jquery.mobilemenu.js"></script>
+<script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.table-db').DataTable({
+            "language": {
+                "lengthMenu": "Show _MENU_",
+                "zeroRecords": "Nothing found - sorry",
+                "info": "Showing page _PAGE_ of _PAGES_",
+                "infoEmpty": "No records available",
+                "infoFiltered": "(filtered from _MAX_ total records)"
+            }
+        });
+    });
+</script>
+</body>
+
+</html>
+{% endblock %}

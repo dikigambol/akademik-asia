@@ -1,0 +1,81 @@
+{{ block("head", "_blocks/head.html") }}
+<div class="wrapper bgded overlay" style="background-image:url('../images/demo/backgrounds/01.png');">
+    <div id="breadcrumb" class="hoc clear">
+        <h6 class="heading">Akreditasi</h6>
+        <br>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="#">Akreditasi</a></li>
+        </ul>
+    </div>
+</div>
+<div class="wrapper row3">
+    <main class="hoc container clear">
+        <div class="sidebar one_quarter first">
+            <h6>Program Studi</h6>
+            <nav class="sdb_holder">
+                <ul>
+                    <li><a href="#">Fakultas Teknologi dan Desain</a>
+                        <ul>
+                            <li><a href="#">Teknik Informatika</a></li>
+                            <li><a href="#">Sistem Komputer</a></li>
+                            <li><a href="#">Desain Komunikasi Visual</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li><a href="#">Fakultas Ekonomi dan Bisnis</a>
+                        <ul>
+                            <li><a href="#">Akuntansi</a></li>
+                            <li><a href="#">Manajemen</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li><a href="#">Pascasarjana</a>
+                        <ul>
+                            <li><a href="#">Magister Manajemen</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="content three_quarter">
+            <h1>List Akreditasi Teknik Informatika</h1>
+            <div class="table-wrapper scrollable">
+                <table class="fl-table">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Tanggal Akreditasi</th>
+                            <th>Akreditasi</th>
+                            <th>Dokumen</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <center>1</center>
+                            </td>
+                            <td>
+                                <center>5 Desember 2022 - 5 Desember 2027</center>
+                            </td>
+                            <td>
+                                <center>Baik Sekali</center>
+                            </td>
+                            <td>
+                                <center>
+                                    <button class="btn-download">
+                                        <i class="fa-cloud-download-alt fa-fw fas"></i> unduh
+                                    </button>
+                                </center>
+                            </td>
+                        </tr>
+                    <tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+</div>
+{{ block("footer", "_blocks/footer.html") }}
