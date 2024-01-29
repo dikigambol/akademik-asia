@@ -18,4 +18,4 @@ jobs:
 
       - name: Deploy to Apache
         run: |
-          sudo cp -r . /var/www/html/akademik-asia
+          ssh gambol@20.11.64.99 'cd /var/www/html/akademik-asia & git pull origin main'
