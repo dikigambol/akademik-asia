@@ -13,11 +13,9 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Setup SSH and Git
-        uses: webfactory/ssh-agent@v0.5.3
-        with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: Install Dependencies with Composer
+        run: composer install
 
       - name: Deploy to Apache
         run: |
-          ssh gambol@20.11.64.99 'cd /var/www/html/akademik-asia && git pull origin main'
+          sudo cp -r . /var/www/html/akademik-asia
