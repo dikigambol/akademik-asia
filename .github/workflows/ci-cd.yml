@@ -1,1 +1,22 @@
+name: Deploy Slim PHP 3 Application
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Install Dependencies with Composer
+        run: composer install
+
+      - name: Deploy to Apache
+        run: |
+          sudo cp -r . /var/www/html/
 
