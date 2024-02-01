@@ -1,4 +1,4 @@
-name: Deploy Slim PHP 3 Application
+name: Test SSH Connection
 
 on:
   push:
@@ -6,13 +6,11 @@ on:
       - main
 
 jobs:
-  deploy:
+  test-ssh-connection:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-        
-      - name: Deployment
+      - name: Test SSH Connection
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.HOST }}
@@ -20,7 +18,4 @@ jobs:
           key: ${{ secrets.PRIVATE_KEY }}
           port: 22
           script: |
-            cd /var/www/html/akademik-asia
-            git pull origin main
-            git status
-            composer install
+            echo "SSH connection successful!"
