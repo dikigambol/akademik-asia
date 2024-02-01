@@ -21,9 +21,9 @@ jobs:
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PRIVATE_KEY }}
+          key: ${{ secrets.PRIVATE_KEY }}
           port: 22
           script: |
             cd /var/www/html/akademik-asia
-            git pull origin master
+            git pull origin main
             git status
