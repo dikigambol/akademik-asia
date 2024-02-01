@@ -16,6 +16,14 @@ jobs:
       - name: Install Dependencies with Composer
         run: composer install
 
-      - name: Deploy to Apache
-        run: |
-          sudo cp -r . /var/www/html/akademik-asia
+      - name: Deploy to apache
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: 22
+          script: |
+            cd /var/www/html/akademik-asia
+            git pull origin master
+            git status
