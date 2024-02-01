@@ -10,13 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-
-      - name: Install Dependencies with Composer
-        run: composer install
-
-      - name: Deploy to apache
+      - uses: actions/checkout@v2
+        
+      - name: Deployment
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.HOST }}
@@ -27,3 +23,4 @@ jobs:
             cd /var/www/html/akademik-asia
             git pull origin main
             git status
+            composer install
