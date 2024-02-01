@@ -1,4 +1,4 @@
-name: Test SSH Connection
+name: Test SSH Pull
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  test-ssh-connection:
+  test-ssh-pull:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,3 +19,5 @@ jobs:
           port: 22
           script: |
             echo "SSH connection successful!"
+            cd /var/www/html/akademik-asia
+            git pull origin main
